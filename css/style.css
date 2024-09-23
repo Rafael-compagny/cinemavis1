@@ -1,0 +1,379 @@
+/* haut de tete */
+header{
+    display: inline-block;
+    background-color: #6D071A;
+}
+header h2{
+	font-size: 40px;
+	padding-left: 300px;
+}
+header p.logo{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 300px;
+  }
+
+  /*nav menu*/
+nav.menu-nav ul p.contacter{
+	font-size: 20px;
+	padding-left: 300px;
+}
+
+
+/* bas de page */
+
+.bande {
+	background: #000; /* Couleur de fond de la bande */
+	color: #fff; /* Couleur du texte dans la bande */
+	padding: 40px; /* Espacement interne pour le contenu de la bande */
+	font-size: 40px;
+	width: 90%
+  }
+
+/*choix de la page*/
+
+	nav.menu-nav ul{
+		padding-left: 400px;
+	}
+
+	nav.menu-nav ul p{
+		padding-left: 200px;
+	}
+
+	nav.menu-nav ul li.btn{
+		display: inline-block;
+	}
+
+	nav.menu-nav ul li.btn a{
+		color: White; 
+		text-decoration: none;
+		padding: 10px;
+		font-size: 30px;
+		background-color: #6D071A;
+		margin: 20px;
+		font-weight: bold;
+	}
+
+	nav.menu-nav ul li.btn{
+		list-style-type: none;
+	}
+
+    nav.menu-nav ul li.btn:hover a{
+		color: #6D071A;
+		background-color: White;
+		transition: 0.3s; all: calc();
+		text-decoration: none;
+	}
+
+    nav{
+	font-size: 40px;
+    }
+
+
+    /*choix de la page dans film*/
+
+	nav.menu-film ul li.btn-a{
+		color: White; 
+		text-decoration: none;
+		padding: 10px;
+		font-size: 30px;
+		background-color: #fff;
+		margin: 20px;
+	}
+
+	nav.menu-film ul li.btn_a{
+		list-style-type: none;
+	}
+
+    nav.menu-film ul li.btn-a:hover a{
+		color: blue;
+		background-color: gray;
+		transition: 0.3s; all: calc();
+	}
+
+    nav{
+	font-size: 40px;
+    }
+
+
+	/*la couleur rouge partout*/
+	html{
+		background-color:#6D071A;
+		font-size: 20px;
+	}
+	body{
+		color: white;
+		font-size: 20px;
+	}
+
+	/*écriture noir gros du bienvnue de chaque pages*/
+	p.Bienvenue{
+		color:white ;
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	/*épaisseur écriture boite*/
+	div.contente{
+		font-size: 30px;
+
+	}
+
+/*pie"ds de pzgew*/
+	footer{
+		color: #fff;
+		font-size: 35px;
+		font-weight: bold;
+		background-color: black;
+		display: inline-flex;
+	}
+	footer p.h10{
+		font-size: 40px;
+	}
+
+/*Note, étoile ... */
+
+.rating {
+	display: inline-block;
+  }
+  
+  .rating input {
+	display: none;
+  }
+  
+  .rating label {
+	float: right;
+	color: grey;
+	padding: 5px;
+	font-size: 40px;
+	cursor: pointer;
+  }
+  
+  .rating label:before {
+	content: '\2605';
+  }
+  
+  .star input:checked ~ label {
+	color: orange;
+  }
+
+  .star {
+	font-size: 24px;
+	color: #FFD700; /* Couleur des étoiles */
+	cursor: pointer;
+  }
+
+
+  /*Les com*/
+
+  #comment-section {
+	margin-top: 60px;
+  }
+  
+  .comment {
+	margin-bottom: 20px;
+  }
+
+/*TEXT AVANT HYPER*/
+div.rightbox h8{
+	color: black;
+	font-size: 30px;
+}
+
+  /*lien hypertext */
+
+div.rightbox a.C {
+	color: white 
+}
+
+h3 a.C{
+	color: white 
+}
+
+
+/*Texte CINEMAVIS en gros*/
+header p.logo h9{
+	size: 80px;
+	font-weight: bold;
+}
+
+/*séparateur lien (très)*/
+hr {
+    border: none;
+    border-top: 3px double white;
+    color: white;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+hr:after {
+    background: #6D071A;
+    content: 'Cinémavis';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+
+nav.menu-nav ul li.btn:hover a{
+	color: #6D071A;
+	background-color: white;
+	transition: 0.3s; all: calc();
+
+}
+
+/*explication dedi*/
+a.Dedi{
+	size: 60px;
+}
+
+/*Couleur rose salomé et rouge Gabin*/
+p.SALOME{
+	color: rgb(254, 21, 235);
+	size: 50px;
+}
+
+p.GABIN{
+	color: rgb(20, 5, 106);
+	size: 50px;
+}
+
+p.loutia{
+	size: 50px;
+	color: black;
+}
+
+p.Luna{
+	size: 50px;
+	color: red;
+}
+
+p.Eloan{
+	size: 50px;
+	color: white;
+}
+
+p.Tom {
+	size: 50px;
+}
+
+p.Suzon{
+	size: 50px;
+	color: rgb(255, 180, 193);
+}
+p.Luc{
+	size: 50px;
+	color: green;
+}
+
+p.Tanaëo{
+	size: 50px;
+	color: white;
+}
+
+p.Niels{
+	size: 50px;
+	color: white;
+}
+
+p.Alexia{
+	size: 50px;
+	color: yellow;
+}
+
+p.Adem{
+	size: 50px;
+	color: black;
+}
+
+a.Clovis{
+	size: 50px;
+	color: #fff;
+}
+
+p.Moi{
+	color: White;
+	size: 60px;
+	font-weight: bold;
+}
+
+p.nom{
+	color: white;
+	font-weight: bold;
+	size: 50px;
+}
+
+p.PUBINSTA{
+	color:#fff;
+	size: 50px;
+	font-weight: bold;
+}
+
+p a.BB{
+	color: #fff;
+	size: 40px;
+}
+
+/*choix page*/
+  nav.page ul p.contacter{
+	font-size: 20px;
+	padding-left: 300px;
+}
+
+/*choix de la page la casa*/
+
+nav.page ul{
+	padding-left: 400px;
+}
+
+nav.page ul p{
+	padding-left: 200px;
+}
+
+nav.page ul li.btn{
+	display: inline-block;
+}
+
+nav.page ul li.btn a{
+	color: White; 
+	text-decoration: none;
+	padding: 10px;
+	font-size: 30px;
+	background-color: #6D071A;
+	margin: 20px;
+	font-weight: bold;
+}
+
+nav.page ul li.btn{
+	list-style-type: none;
+}
+
+nav.page ul li.btn:hover a{
+	color: #6D071A;
+	background-color: White;
+	transition: 0.3s; all: calc();
+}
+
+nav{
+font-size: 40px;
+}
+
+
+/*couleur lien com*/
+a.C{
+	color: #eef838;
+	text-decoration: none;
+}
+
+/*lien plateforme*/
+a.P{
+	color: white
+}
+
+/*lien plateforme*/
+a.B{
+	color: white;
+	text-decoration: none;
+}
