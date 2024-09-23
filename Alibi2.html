@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cinémavis</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- logo + nom -->
+
+    <header>
+		<img src="img/logo.jpg" width="100" height="100">
+		<p class="logo">
+			Cinémavis
+            Alibi.com 2
+		</p>
+	</header>
+
+
+    <!-- diiférent page -->
+
+	<nav class="menu-nav">
+        <ul>
+            <li class="btn">
+                <a href="index.html">
+                    Accueil
+                </a>
+            </li>
+            <li class="btn">
+                <a href="Films.html">
+                    films
+                </a>
+            </li>
+            <li class="btn">
+                <a href="series.html">
+                    Séries
+                </a>
+            </li>
+            <li class="btn">
+                <a href="autre.html">
+                    Autres
+                </a>
+            </li>
+            <li class="btn" :hover>
+              <a href="profil2.html">
+                  Profil
+              </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="content">
+
+        <div class="leftbox"> 
+            <h1>
+                Alibi.com 2
+            </h1>
+                <div><img src="img/Alibi2.jpg" width="250" height="300"></div>
+                <div :hover><iframe width="560" height="315" src="https://www.youtube.com/embed/TNvXaQrS-e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                
+        </div>
+        <div class="middlebox">
+          
+            <h1>
+                Bande annonce:
+            </h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TNvXaQrS-e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    
+    
+    <!--Systéme j'aime, j'aime pas-->
+
+    <h1>Système d'avis</h1>
+
+    <div id="avisContainer">
+      <button id="btnLike" onclick="ajouterAvis('like')">J'aime</button>
+      <button id="btnDislike" onclick="ajouterAvis('dislike')">Je n'aime pas</button>
+    </div>
+  
+    <h2>Résumé des avis :</h2>
+    <p>Total J'aime : <span id="totalLikes">0</span></p>
+    <p>Total Je n'aime pas : <span id="totalDislikes">0</span></p>
+  
+    <script>
+      // Variables pour stocker le total des avis
+      var totalLikes = 0;
+      var totalDislikes = 0;
+  
+      // Fonction pour ajouter un avis
+      function ajouterAvis(type) {
+        if (type === 'like') {
+          totalLikes++;
+        } else if (type === 'dislike') {
+          totalDislikes++;
+        }
+  
+        // Mettre à jour les valeurs affichées
+        document.getElementById("totalLikes").textContent = totalLikes;
+        document.getElementById("totalDislikes").textContent = totalDislikes;
+      }
+    </script>
+          
+          <div class="rightbox">
+              <h1>
+                  Alibi.com 2, récapitulatif :
+              </h1>
+              <p>
+                 
+              </p>
+          </div>
+  
+  
+          <!--note-->
+  
+          <h1>Note</h1>
+  
+    <div id="evaluationContainer">
+      <span class="star" onclick="ajouterEvaluation(1)">&#9734;</span>
+      <span class="star" onclick="ajouterEvaluation(2)">&#9734;</span>
+      <span class="star" onclick="ajouterEvaluation(3)">&#9734;</span>
+      <span class="star" onclick="ajouterEvaluation(4)">&#9734;</span>
+      <span class="star" onclick="ajouterEvaluation(5)">&#9734;</span>
+    </div>
+  
+    <h2>Résumé de l'évaluation :</h2>
+    <p>Moyenne des étoiles : <span id="moyenneEtoiles">0</span></p>
+  
+    <script>
+      // Variables pour stocker les évaluations
+      var evaluations = [];
+  
+      // Fonction pour ajouter une évaluation
+      function ajouterEvaluation(note) {
+        evaluations.push(note);
+  
+        // Calculer la moyenne
+        var moyenne = calculerMoyenne(evaluations);
+  
+        // Mettre à jour la moyenne affichée
+        document.getElementById("moyenneEtoiles").textContent = moyenne.toFixed(1);
+      }
+  
+      // Fonction pour calculer la moyenne
+      function calculerMoyenne(array) {
+        if (array.length === 0) {
+          return 0;
+        }
+  
+        var somme = array.reduce(function(total, valeur) {
+          return total + valeur;
+        });
+  
+        return somme / array.length;
+      }
+    </script>
+          
+      
+      
+      
+      
+          <!--Ici c'est les commentaires-->
+  
+
+ <h1>Commentaires</h1>
+
+  <ul id="commentList">
+    <!-- Les commentaires seront ajoutés ici dynamiquement -->
+  </ul>
+
+  <form id="commentForm">
+    <label for="comment">Laissez un commentaire :</label>
+    <textarea id="comment" required></textarea><br>
+
+    <input type="submit" value="Poster le commentaire">
+  </form>
+
+  <script src="script.js"></script>
+    <!-- pieds de page -->
+
+<footer>
+    <p>
+        Développer par Rafaël G. (entierement), avec Alexia pour l'héstétique; 
+        Copyright &copy; Rafaël compagny - 2022 
+        contacter nous à : cinemavis6@gmail.com
+    </p>
+</footer>
+
+
+</body>
+</html>

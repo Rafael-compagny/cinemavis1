@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cinémavis</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- logo + nom -->
+
+    <header>
+		<img src="img/logo.jpg" width="100" height="100">
+		<p class="logo">
+			Cinémavis
+            <h2>Jumanji : Bienvenue dans la jungle</h2>
+		</p>
+	</header>
+
+
+    <!-- diiférent page -->
+
+	<nav class="menu-nav">
+        <ul>
+            <li class="btn">
+                <a href="index.html">
+                    Accueil
+                </a>
+            </li>
+            <li class="btn">
+                <a href="Films.html">
+                    films
+                </a>
+            </li>
+            <li class="btn">
+                <a href="series.html">
+                    Séries
+                </a>
+            </li>
+            <li class="btn">
+                <a href="autre.html">
+                    Autres
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="content">
+
+        <div class="leftbox"> 
+            <h1>
+                Jumanji : Bienvenue dans la jungle
+            </h1>
+                <img src="img/jumanji.png" width="250" height="300">
+        </div>
+        <div class="middlebox">
+            <h1>
+                Bande annonce:
+            </h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oZI2njF5rx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <!--Systéme j'aime, j'aime pas-->
+
+        <h1>Système d'avis</h1>
+
+  <div id="avisContainer">
+    <button id="btnLike" onclick="ajouterAvis('like')">J'aime</button>
+    <button id="btnDislike" onclick="ajouterAvis('dislike')">Je n'aime pas</button>
+  </div>
+
+  <h2>Résumé des avis :</h2>
+  <p>Total J'aime : <span id="totalLikes">0</span></p>
+  <p>Total Je n'aime pas : <span id="totalDislikes">0</span></p>
+
+  <script>
+    // Variables pour stocker le total des avis
+    var totalLikes = 0;
+    var totalDislikes = 0;
+
+    // Fonction pour ajouter un avis
+    function ajouterAvis(type) {
+      if (type === 'like') {
+        totalLikes++;
+      } else if (type === 'dislike') {
+        totalDislikes++;
+      }
+
+      // Mettre à jour les valeurs affichées
+      document.getElementById("totalLikes").textContent = totalLikes;
+      document.getElementById("totalDislikes").textContent = totalDislikes;
+    }
+  </script>
+        
+        <div class="rightbox">
+            <h1>
+                Jumanji : Bienvenue dans la jungle, récapitulatif :
+                Jumanji : Bienvenue dans la jungle, réaliser par Jake Kasdan, sorie le 20 décemnbre 2017
+                Le destin de quatre lycéens en retenue bascule lorsqu’ils sont aspirés dans le monde de Jumanji. Après avoir découvert une vieille console contenant un jeu vidéo dont ils n’avaient jamais entendu parler, les quatre jeunes se retrouvent mystérieusement propulsés au cœur de la jungle de Jumanji, dans le corps de leurs avatars. Ils vont rapidement découvrir que l’on ne joue pas à Jumanji, c’est le jeu qui joue avec vous… Pour revenir dans le monde réel, il va leur falloir affronter les pires dangers et triompher de l’ultime aventure. Sinon, ils resteront à jamais prisonniers de Jumanji…
+            </h1>
+            <p>
+               
+            </p>
+        </div>
+
+
+        <!--note-->
+
+        <h1>Note</h1>
+
+  <div id="evaluationContainer">
+    <span class="star" onclick="ajouterEvaluation(1)">&#9734;</span>
+    <span class="star" onclick="ajouterEvaluation(2)">&#9734;</span>
+    <span class="star" onclick="ajouterEvaluation(3)">&#9734;</span>
+    <span class="star" onclick="ajouterEvaluation(4)">&#9734;</span>
+    <span class="star" onclick="ajouterEvaluation(5)">&#9734;</span>
+  </div>
+
+  <h2>Résumé de l'évaluation :</h2>
+  <p>Moyenne des étoiles : <span id="moyenneEtoiles">0</span></p>
+
+  <script>
+    // Variables pour stocker les évaluations
+    var evaluations = [];
+
+    // Fonction pour ajouter une évaluation
+    function ajouterEvaluation(note) {
+      evaluations.push(note);
+
+      // Calculer la moyenne
+      var moyenne = calculerMoyenne(evaluations);
+
+      // Mettre à jour la moyenne affichée
+      document.getElementById("moyenneEtoiles").textContent = moyenne.toFixed(1);
+    }
+
+    // Fonction pour calculer la moyenne
+    function calculerMoyenne(array) {
+      if (array.length === 0) {
+        return 0;
+      }
+
+      var somme = array.reduce(function(total, valeur) {
+        return total + valeur;
+      });
+
+      return somme / array.length;
+    }
+  </script>
+        
+    
+    
+    
+    
+        <!--Ici c'est les commentaires-->
+
+
+        <h1>Commentaires</h1>
+
+        <form id="commentForm">
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" required><br>
+      
+          <label for="commentaire">Commentaire :</label><br>
+          <textarea id="commentaire" rows="4" cols="50" required></textarea><br>
+      
+          <label for="note">Note :</label>
+          <select id="note">
+            <option value="1">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select><br>
+      
+          <input type="submit" value="Soumettre">
+        </form>
+      
+        <h2>Commentaires précédents :</h2>
+        <ul id="commentairesListe">
+          <!-- Les commentaires précédents seront affichés ici -->
+        </ul>
+      
+        <script>
+          // Fonction pour ajouter un commentaire
+          function ajouterCommentaire() {
+            var nom = document.getElementById("nom").value;
+            var commentaire = document.getElementById("commentaire").value;
+            var note = document.getElementById("note").value;
+            var date = new Date().toLocaleString(); // Obtenir la date actuelle
+      
+            // Créer un objet pour le commentaire
+            var nouvelCommentaire = {
+              nom: nom,
+              commentaire: commentaire,
+              note: note,
+              date: date
+            };
+      
+            // Créer un nouvel élément li pour afficher le commentaire
+            var nouveauCommentaire = document.createElement("li");
+            nouveauCommentaire.innerHTML =
+              "<strong>" + nouvelCommentaire.nom + " :</strong> " +
+              nouvelCommentaire.commentaire +
+              " - Note : " + nouvelCommentaire.note +
+              " - Date : " + nouvelCommentaire.date;
+      
+            // Ajouter le nouvel élément li à la liste des commentaires
+            var listeCommentaires = document.getElementById("commentairesListe");
+            listeCommentaires.appendChild(nouveauCommentaire);
+      
+            // Réinitialiser les champs du formulaire
+            document.getElementById("nom").value = "";
+            document.getElementById("commentaire").value = "";
+            document.getElementById("note").value = "1";
+          }
+      
+          // Gérer la soumission du formulaire
+          var form = document.getElementById("commentForm");
+          form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêcher le rechargement de la page
+            ajouterCommentaire();
+          });
+        </script>
+
+
+
+    <!-- pieds de page -->
+
+<footer>
+    <div class="bande">
+        Développer par Rafaël G. (entierement), avec Alexia pour l'héstétique; 
+        Copyright &copy; Rafaël compagny - 2022 
+        contacter nous à : cinemavis6@gmail.com
+    </div>
+</footer>
+
+
+</body>
+</html>
